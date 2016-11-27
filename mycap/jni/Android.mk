@@ -111,3 +111,35 @@ LOCAL_SHARED_LIBRARIES := gui binder
 
 include $(BUILD_EXECUTABLE)
 #===================================
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := mysys
+
+LOCAL_SRC_FILES := mysys.cpp
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) 
+LOCAL_C_INCLUDES := $(LOCAL_PATH) 
+
+LOCAL_LDLIBS := -lGLESv2 -llog -lz
+LOCAL_EXPORT_LDLIBS := -lGLESv2 -llog -lz
+
+LOCAL_SHARED_LIBRARIES :=
+
+include $(BUILD_EXECUTABLE)
+#===================================
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := myjni
+
+LOCAL_SRC_FILES := myjni.c
+
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) 
+LOCAL_C_INCLUDES := $(LOCAL_PATH) 
+
+LOCAL_LDLIBS := -lGLESv2 -llog -lz
+LOCAL_EXPORT_LDLIBS := -lGLESv2 -llog -lz
+
+LOCAL_SHARED_LIBRARIES :=
+
+include $(BUILD_SHARED_LIBRARY)
+#===================================
